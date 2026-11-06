@@ -27,9 +27,9 @@ const skills = [
 const education = [
   {
     degree: 'Bachelor of Science in Web Systems Technology',
-    school: 'Your University Name Here',
+    school: 'College of Information & Communications Technology',
     period: '2022 – Present',
-    note: 'Relevant coursework: Web Development, Database Management, UI/UX Design, Software Engineering',
+    note: 'Focused coursework: Web Systems & Technologies, Database Management, UI/UX Design, Front-End Frameworks',
   },
 ]
 
