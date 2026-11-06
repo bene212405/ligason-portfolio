@@ -80,7 +80,7 @@ export default function Hero() {
           <motion.div {...fadeUp(0.6)} className="flex gap-4 mt-8">
             {/* GitHub */}
             <a
-              href="https://github.com/"
+              href="https://github.com/krishamaeligason"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

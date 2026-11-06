@@ -1,16 +1,13 @@
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 function FadeIn({ children, delay = 0, className = '' }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-80px' })
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 32 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
       {children}
@@ -80,8 +77,8 @@ export default function Contact() {
                   </svg>
                 ),
                 label: 'GitHub',
-                value: 'github.com/krishamae',
-                href:  'https://github.com/',
+                value: 'https://github.com/krishamaeligason',
+                href:  'https://github.com/krishamaeligason',
               },
             ].map(({ icon, label, value, href }) => (
               <a

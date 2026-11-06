@@ -1,15 +1,12 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 
 function FadeIn({ children, delay = 0, className = '' }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-80px' })
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 32 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
       {children}
@@ -157,7 +154,7 @@ export default function Projects() {
                   {/* Action buttons */}
                   <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-100">
                     <a
-                      href="https://github.com/"
+                      href="https://github.com/krishamaeligason"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-purple-200 text-purple-600 text-sm font-semibold hover:bg-purple-50 transition-all hover:-translate-y-0.5"
@@ -190,7 +187,7 @@ export default function Projects() {
         <FadeIn delay={0.3} className="mt-14 text-center">
           <p className="text-gray-400 text-sm mb-5">More projects coming soon — stay tuned! ✨</p>
           <a
-            href="https://github.com/"
+            href="https://github.com/krishamaeligason"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full border-2 border-purple-300 text-purple-600 text-sm font-semibold hover:bg-purple-50 transition-all hover:-translate-y-0.5"
